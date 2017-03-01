@@ -25,6 +25,12 @@ ul.ui-autocomplete {
   }
 }
 
+
 .ui-helper-hidden-accessible {
-	display: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+	display: block;
+  background-color: white;
+  opacity: 0.5;
 }
