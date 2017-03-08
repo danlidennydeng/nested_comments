@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @personal.fullname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @personal.user.email %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @personal.community.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @personal.community.local.district.city.state.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @personal.community.local.district.city.name %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @personal.community.local.district.name %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @personal.community.local.name %>
+</p>
+
+<%= link_to 'Edit', edit_personal_path(@personal) %> |
+<%= link_to 'Back', personals_path %>

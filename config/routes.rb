@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :microposts
+  resources :personals
+  resources :articles
+  resources :communities
+  resources :locals
+  devise_for :users
   resources :districts
   resources :cities
   resources :states

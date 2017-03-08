@@ -55,3 +55,27 @@
 #   content = Faker::Lorem.sentence(5)
 #   users.each { |user| user.microposts.create!(content: content) }
 # end
+
+#Article.destroy_all
+data = [{ title: 'Star Wars', content: 'Wonderful adventure in the space' }, 
+        { title: 'Lord of the Rings', content: 'Lord that became a ring' },
+        { title: 'Man of the Rings', content: 'Lord that became a ring' },
+        { title: 'Woman of the Rings', content: 'Lord that became a ring' },
+        { title: 'Dog of the Rings', content: 'Lord that became a ring' },
+        { title: 'Daddy of the Rings', content: 'Lord that became a ring' },
+        { title: 'Mommy of the Rings', content: 'Lord that became a ring' },
+        { title: 'Duck of the Rings', content: 'Lord that became a ring' },
+        { title: 'Drug Lord of the Rings', content: 'Lord that became a ring' },
+        { title: 'Native of the Rings', content: 'Lord that became a ring' },
+        { title: 'Naysayer of the Rings', content: 'Lord that became a ring' },
+        { title: 'Tab Wars', content: 'Lord that became a ring' },
+        { title: 'Drug Wars', content: 'Lord that became a ring' },
+        { title: 'Cheese Wars', content: 'Lord that became a ring' },
+        { title: 'Dog Wars', content: 'Lord that became a ring' },
+        { title: 'Dummy Wars', content: 'Lord that became a ring' },
+        { title: 'Dummy of the Rings', content: 'Lord that became a ring' },
+        { title: '北京土地供给爆发', content: '对土地供给做“减法”的北京，突然爆发。3月2日，北京市国土资源委员会官方网站再公开挂牌3宗经营性用地，最近9天，北京公开挂牌的10宗经营性用地，起始出让总价160.65亿元，合计出让面积50.72万平方米，规划建筑面积为96.79万平方米，较去年同期增加104.76%。' },
+        { title: '政府限价低于二手房价格', content: '出让公告显示，2017年至今，北京公开挂牌的10宗经营性用地中，住宅性质和含住宅性质用地的地块共计5宗，而2016年全年北京出让含住宅性质的地块仅13宗。' }
+
+        ]
+Article.create(data)

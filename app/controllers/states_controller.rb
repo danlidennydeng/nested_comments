@@ -4,7 +4,11 @@ class StatesController < ApplicationController
   # GET /states
   # GET /states.json
   def index
-    @states = State.all
+    #@states = State.all
+
+    @states = State.find_by_sql("select * from states")
+
+    #@states = State.connection.select_all("select * from states")
   end
 
   # GET /states/1

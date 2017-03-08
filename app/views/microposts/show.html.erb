@@ -1,0 +1,41 @@
+
+
+<p>
+  <strong>Content:</strong>
+  <%= @micropost.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @micropost.user.personal.fullname %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @micropost.community.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @micropost.community.local.district.city.state.name %>
+</p>
+
+<p>
+  <strong>city:</strong>
+  <%= @micropost.community.local.district.city.name %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @micropost.community.local.district.name %>
+</p>
+
+<p>
+  <strong>local:</strong>
+  <%#= link_to @micropost.community.local.name, :controller => 'local', :action => 'show', :id %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
+<%= link_to 'Back', microposts_path %>

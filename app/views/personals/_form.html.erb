@@ -1,0 +1,31 @@
+<%= form_for(personal) do |f| %>
+  <% if personal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(personal.errors.count, "error") %> prohibited this personal from being saved:</h2>
+
+      <ul>
+      <% personal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :fullname %>
+    <%= f.text_field :fullname %>
+  </div>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
+
+  <div class="field">
+    <%= f.label :community_id %>
+    <%= f.collection_select(:community_id, Community.all, :id, :name) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @local.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @local.district.city.state.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @local.district.city.name %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @local.district.name %>
+</p>
+
+<%= link_to 'Edit', edit_local_path(@local) %> |
+<%= link_to 'Back', locals_path %>
+<div>
+  <ol>
+    <% @local.microposts.each do |local| %>
+      
+      <li>
+        
+        <%= local.content %> posted by <%= local.user.email %>, <%= local.user.personal.fullname %>
+     </li>
+
+     <% end %>
+    </ol>
+</div>
