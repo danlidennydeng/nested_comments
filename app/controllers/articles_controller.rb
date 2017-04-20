@@ -4,9 +4,27 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    #@articles = Article.all
+
+    # @articles = if params[:query].present?
+    #   Article.search(params[:query])
+    # else    
+    #   Article.all
+    # end
+
+    search = params[:term].present? ? params[:term] : nil
+    @articles = if search
+      Article.search(search)
+    else
+      Article.all
+    end
   end
 
+  # def autocomplete
+  #   render json: Article.search(params[:query], autocomplete: true, limit: 10).map do |book|
+  #     { title: book.title, value: book.id }
+  #   end
+  # end
   # GET /articles/1
   # GET /articles/1.json
   def show

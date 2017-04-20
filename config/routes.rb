@@ -16,5 +16,11 @@ Rails.application.routes.draw do
 
   resources :products
   resources :categories
+
+  # resources :articles do
+  #   collection do
+  #   #  get :ac_field
+  #   # end 
+  # end
   
 end

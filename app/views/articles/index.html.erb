@@ -2,6 +2,13 @@
 
 <h1>Articles</h1>
 
+<%= form_tag articles_path, method: :get do %>
+  <%= text_field_tag :query, params[:query], class: 'form-control' %>
+
+  <%#= text_field_tag :query, params[:query], class: 'form-control typeahead', id: "article_search" %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <table>
   <thead>
     <tr>

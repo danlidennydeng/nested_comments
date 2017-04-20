@@ -56,7 +56,7 @@
 #   users.each { |user| user.microposts.create!(content: content) }
 # end
 
-#Article.destroy_all
+Article.destroy_all
 data = [{ title: 'Star Wars', content: 'Wonderful adventure in the space' }, 
         { title: 'Lord of the Rings', content: 'Lord that became a ring' },
         { title: 'Man of the Rings', content: 'Lord that became a ring' },

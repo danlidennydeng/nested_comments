@@ -7,6 +7,7 @@ end
 
 ruby '2.3.3'
 
+#gem 'elasticsearch_autocomplete'
 gem 'searchkick'
 gem 'devise'
 gem 'jquery-ui-rails'
