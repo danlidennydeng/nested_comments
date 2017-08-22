@@ -1,7 +1,7 @@
 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 <div class="jumbotron">
   <div class="container">
-    <h1>Join the discussion</h1>
+    <h4>Join the discussion</h4>
     <p>Click the button below to start a new thread:</p>
     <p>
       <span class="glyphicon glyphicon-search" aria-hidden="true"></span><%= link_to 'Add new topic', new_comment_path, class: 'btn btn-primary btn-lg' %>
@@ -9,5 +9,5 @@
   </div>
 </div>
 <%= comments_tree_for @comments %>
-<%#= render @comments %>
+
 <div class="test"></div>

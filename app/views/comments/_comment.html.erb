@@ -1,10 +1,10 @@
 <div class="well">
-  <h2><%= comment.title %></h2>
+  <h4><%= comment.title %></h4>
   <p class="text-muted"><%= comment.root? ? "Started by" : "Replied by" %> <strong><%= comment.author %></strong> on
     <%= l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %></p>
 
   <blockquote>
-    <p><%= comment.body %></p>
+    <p class="commentfont"><%= comment.body %></p>
   </blockquote>
 
   <% from_reply_form ||= nil %>
@@ -12,6 +12,9 @@
     <% if comment.leaf? %>
       <small class="text-muted">There are no replies yet - be the first one to reply!</small>
     <% end %>
-    <p><%= link_to 'reply', new_comment_path(comment.id) %></p>
+    <p><%#= link_to 'reply', new_comment_path(comment.id) %>
+      <%= link_to 'reply', :controller => 'comments', :action => 'new', :parent_id => comment.id %>
+    </p>
+    <p><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   <% end %>
 </div>

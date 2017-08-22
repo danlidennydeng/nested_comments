@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.hash_tree
+    @comments = Comment.hash_tree(:limit_depth => 2)
   end
 
 	def new
@@ -23,6 +23,15 @@ class CommentsController < ApplicationController
 	    render 'new'
 	  end
 	end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: 'Personal was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 
 	private
 
