@@ -35,7 +35,7 @@
   <%#= link_to @micropost.community.local.name, :controller => 'local', :action => 'show', :id %>
 </p>
 
-
+<%= link_to 'complains?', :controller => 'complains', :action => 'new', :id => @micropost.id %>
 
 <%= link_to 'Edit', edit_micropost_path(@micropost) %> |
 <%= link_to 'Back', microposts_path %>
